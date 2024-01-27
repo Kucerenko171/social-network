@@ -10,6 +10,7 @@
         //Compiler will handle not just TS files, also JS files
         "allowJs": true,
         "moduleResolution": "node",
+        "baseUrl": ".",
         //esModuleInterop lets to work with packages that use common js
         //with common packages with import (require() module.export) = common js
         "esModuleInterop": true,
