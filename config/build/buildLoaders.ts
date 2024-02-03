@@ -9,7 +9,6 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     test: /\.s[ac]ss$/i,
     use: [
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-      // "css-loader",
       {
         loader: "css-loader",
         options: {
