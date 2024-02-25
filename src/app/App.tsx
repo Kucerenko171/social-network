@@ -1,8 +1,8 @@
 import {AppRouter} from "app/prodivers/router";
 import {useTheme} from "app/prodivers/ThemeProvider";
-import {Link} from "react-router-dom";
 import './styles/index.scss';
-import {classNames} from "shared/lib/classNames/classNames";
+import {classNames} from "shared/lib";
+import {Navbar} from "widgets/Navbar";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -10,8 +10,7 @@ export const App = () => {
     return (
         <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>Change theme</button>
-            <Link to={'/'}>Main page</Link>
-            <Link to={'/about'}>About page</Link>
+            <Navbar />
             <AppRouter />
         </div>
     );
