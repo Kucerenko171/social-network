@@ -5,11 +5,10 @@ import {classNames} from "shared/lib";
 import {Navbar} from "widgets/Navbar";
 
 export const App = () => {
-    const {theme, toggleTheme} = useTheme();
+    const {theme} = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <button onClick={toggleTheme}>Change theme</button>
             <Navbar />
             <AppRouter />
         </div>
